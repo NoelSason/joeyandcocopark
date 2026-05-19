@@ -1,0 +1,186 @@
+:root {
+    --bg-color: #faf9f6; /* Off-white / soft beige */
+    --text-color: #333333;
+    --accent-color: #8b7355; /* Warm earthy tone */
+    --card-bg: #ffffff;
+    --border-color: #eaddcf;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+header {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    text-align: center;
+    padding: 4rem 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+header h1 {
+    font-size: 3.5rem;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+header .subtitle {
+    font-size: 1.2rem;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    opacity: 0.9;
+    margin-top: 0.5rem;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.intro {
+    text-align: center;
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
+    color: #555;
+}
+
+.dogs-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+    flex: 1;
+    min-width: 300px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+}
+
+.card h2 {
+    color: var(--accent-color);
+    font-size: 2.2rem;
+    margin-top: 0;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background-color: var(--bg-color);
+    color: var(--accent-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    border: 1px solid var(--border-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.traits {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 1.5rem;
+}
+
+.traits li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.traits li::before {
+    content: "🐾";
+    position: absolute;
+    left: 0;
+    top: 0px;
+    font-size: 0.9rem;
+    color: var(--accent-color);
+}
+
+.gallery {
+    margin-top: 2rem;
+}
+
+.gallery h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 2rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.gallery-item {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.note {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 2rem;
+    font-style: italic;
+}
+
+footer {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: var(--bg-color);
+    color: var(--accent-color);
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    border-top: 1px solid var(--border-color);
+    font-size: 1.2rem;
+}
